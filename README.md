@@ -8,7 +8,7 @@ Added option to name the `access_token` and `refresh_token` parameters.
 **example**:
 ```js
 options = {
-  accessTokenName: "fb-access-token"
+  accessTokenName: "fb-access-token",
   refreshTokenName: "fb-refresh-token"
 }
 ```
@@ -16,6 +16,14 @@ options = {
 ## Use Case
 When having a service that does own authentication and user wants to attach the facebook information to the account (for social graphs), the access_token parameter clashed with e.g. `passport-http-bearer` npm module.
 
+# Added option to name the Strategy.
+```js
+options = {
+  name: "fb"
+}
+
+passport.authenticate("fb")
+```
 
 # Passport-Facebook-Token
 
