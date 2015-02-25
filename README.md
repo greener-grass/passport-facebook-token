@@ -1,3 +1,30 @@
+
+# Forked. Added enhancements: 
+Forked from: [Passport-Facebook-Token](https://github.com/drudge/passport-facebook-token)
+
+# Added option to name the parameters. 
+
+Added option to name the `access_token` and `refresh_token` parameters. 
+**example**:
+```js
+options = {
+  accessTokenName: "fb-access-token",
+  refreshTokenName: "fb-refresh-token"
+}
+```
+
+## Use Case
+When having a service that does own authentication and user wants to attach the facebook information to the account (for social graphs), the access_token parameter clashed with e.g. `passport-http-bearer` npm module.
+
+# Added option to name the Strategy.
+```js
+options = {
+  name: "fb"
+}
+
+passport.authenticate("fb")
+```
+
 # Passport-Facebook-Token
 
 [Passport](http://passportjs.org/) strategy for authenticating with [Facebook](http://www.facebook.com/)
